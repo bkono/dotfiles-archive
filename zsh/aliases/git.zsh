@@ -2,7 +2,7 @@ alias gst='git status'
 compdef _git gst=git-status
 alias gd='git diff'
 compdef _git gd=git-diff
-alias gl='git pull'
+alias gp='git pull'
 compdef _git gl=git-pull
 alias gp!='git push'
 compdef _git gp=git-push
@@ -106,7 +106,6 @@ alias gdm='git diff master'
 alias gf='git fetch'
 alias gm='git checkout master'
 alias gm!='git merge'
-alias glr='git pull --rebase'
 alias gta='git tag -a'
 alias gpt='git push --tags origin master'
 alias gsa='git submodule add'
@@ -119,7 +118,7 @@ alias gsfp='git submodule foreach git pull'
 alias gsfp!='git submodule foreach git push'
 
 # Deprecated
-alias gp='echo "Use gp! instead"'
+alias gl='echo "Use gp instead"'
 
 function g {
   if [[ $# > 0 ]]; then
