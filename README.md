@@ -1,4 +1,4 @@
-thoughtbot dotfiles
+kono dotfiles
 ===================
 
 Requirements
@@ -13,7 +13,7 @@ Install
 
 Clone onto your laptop:
 
-    git clone git://github.com/thoughtbot/dotfiles.git
+    git clone git://github.com/bkonowitz/dotfiles.git
 
 (Or, [fork and keep your fork
 updated](http://robots.thoughtbot.com/post/5133345960)).
@@ -26,6 +26,9 @@ Install:
 This will create symlinks for config files in your home directory.
 
 You can safely run `./install.sh` multiple times to update.
+
+* Note: After install, please be sure to update your _.gitconfig_ and change the
+  name from konowitzb@gmail.com / Bryan Konowitz to your own. Thanks!
 
 Make your own customizations
 ----------------------------
