@@ -43,12 +43,15 @@ alias dr='cd ~/Dropbox'
 alias aliases='vim ~/.dotfiles/zsh/aliases'
 alias codereview='vim ~/Dropbox/Notes/code-review-checklist.txt'
 alias ideas='vim ~/Dropbox/Notes/ideas.txt'
-alias tsl='vim ~/Dropbox/Notes/tool_sharpening_list.txt'
+alias tsl='vim ~/Dropbox/Notes/tool_sharpening_list.md'
 
 # Ruby
 alias fs='foreman start'
 alias irb='irb --readline -r irb/completion'
 alias killruby='killall -9 ruby'
+
+# Scala
+alias mts='mvn test -Dsuites='
 
 # Services
 alias restart_postgres="stoppostgres && startpostgres"

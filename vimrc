@@ -48,7 +48,9 @@ map <Leader>ra :%s/
 map <Leader>rd :!bundle exec rspec % --format documentation<CR>
 map <Leader>rs :vsp <C-r>#<cr><C-w>w
 map <Leader>so :so %<cr>
+map <Leader>sov :so ~/.vimrc<cr>
 map <Leader>t :w<cr>:call RunCurrentTest()<CR>
+map <Leader>st :!mvn -Dsuites=com.oddz.api.GameplayApiEndpointSpec test<CR>
 map <Leader>u :Runittest<cr>
 map <Leader>w <C-w>w
 map <Leader>x :exec getline(".")<cr>
@@ -63,6 +65,7 @@ map <Leader>pn :sp ~/Dropbox/Notes/project_notes.md<cr>
 map <Leader>tsl :sp ~/Dropbox/Notes/tool_sharpening_list.md<cr>
 map <Leader>sn :e ~/.vim/snippets/ruby.snippets<CR>
 map <Leader>vi :tabe ~/.vimrc<CR>
+map <Leader>vib :tabe ~/.vimrc.bundles<CR>
 map <Leader>task :sp ~/Dropbox/Notes/tasks.md<CR>
 
 " Edit another file in the same directory as the current file
@@ -146,6 +149,8 @@ set numberwidth=5
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
+
+set wildignore+=*/tmp/*,*/target/*,*.so,*.swp,*.zip
 
 " Tab completion
 " will insert tab at beginning of line,
