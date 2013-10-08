@@ -46,6 +46,12 @@ alias codereview='vim ~/Dropbox/Notes/code-review-checklist.txt'
 alias ideas='vim ~/Dropbox/Notes/ideas.txt'
 alias tsl='vim ~/Dropbox/Notes/tool_sharpening_list.md'
 
+# Maven shortctus
+alias mci='mvn clean install'
+alias mi='mvn install'
+alias mp='mvn package'
+alias mcp='mvn clean package'
+
 # Ruby
 alias fs='foreman start'
 alias irb='irb --readline -r irb/completion'
