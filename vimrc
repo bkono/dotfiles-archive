@@ -18,6 +18,8 @@ set smarttab
 set viminfo+=!
 set guioptions-=T
 set showmatch
+set visualbell
+set noerrorbells
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.

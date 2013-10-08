@@ -80,7 +80,7 @@ export M2_HOME="/usr/local/Cellar/maven/3.1.0/libexec"
 # export M2_HOME="/usr/share/maven/"
 export EDITOR='subl -w'
 export COPYFILE_DISABLE=true
-export RBENV_ROOT=/usr/local/var/rbenv
+export RBENV_ROOT=/usr/local/Cellar/rbenv/0.4.0/
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 

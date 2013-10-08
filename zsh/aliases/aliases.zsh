@@ -38,6 +38,7 @@ alias code='cd ~/code'
 alias oddz='cd ~/code/oddz'
 alias d='cd ~/.dotfiles'
 alias dr='cd ~/Dropbox'
+alias jet='cd ~/servers/jetty/'
 
 # File Shortcuts
 alias aliases='vim ~/.dotfiles/zsh/aliases'
