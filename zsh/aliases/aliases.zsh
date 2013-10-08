@@ -40,6 +40,10 @@ alias d='cd ~/.dotfiles'
 alias dr='cd ~/Dropbox'
 alias jet='cd ~/servers/jetty/'
 
+# Server Shortcuts
+alias api0='ssh ubuntu@api0-sb.oddz.int'
+alias www0='ssh ubuntu@www0-sb.oddz.int'
+
 # File Shortcuts
 alias aliases='vim ~/.dotfiles/zsh/aliases'
 alias codereview='vim ~/Dropbox/Notes/code-review-checklist.txt'
