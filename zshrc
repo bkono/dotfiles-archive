@@ -71,16 +71,17 @@ autoload -U compinit
 compinit
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:~/lib/play/current
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home"
 export JAVA_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M"
 export MAVEN_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M"
-export M2_HOME="/usr/local/Cellar/maven/3.1.0/libexec"
+export M2_HOME="/usr/local/Cellar/maven30/3.0.5/libexec"
 # export M2_HOME="/usr/share/maven/"
 export EDITOR='subl -w'
 export COPYFILE_DISABLE=true
 export RBENV_ROOT=/usr/local/Cellar/rbenv/0.4.0/
+export ANDROID_HOME="/Users/bkonowitz/lib/adt/current/sdk"
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 

@@ -43,6 +43,7 @@ alias jet='cd ~/servers/jetty/'
 # Server Shortcuts
 alias api0='ssh ubuntu@api0-sb.oddz.int'
 alias www0='ssh ubuntu@www0-sb.oddz.int'
+alias sso0='ssh ubuntu@sso0-sb.oddz.int'
 
 # File Shortcuts
 alias aliases='vim ~/.dotfiles/zsh/aliases'
