@@ -56,6 +56,7 @@ map <Leader>st :!mvn -Dsuites=com.oddz.api.GameplayApiEndpointSpec test<CR>
 map <Leader>u :Runittest<cr>
 map <Leader>w <C-w>w
 map <Leader>x :exec getline(".")<cr>
+map <Leader>spell :setlocal spell! spelllang=en_us<CR>
 
 
 " File shortcuts
