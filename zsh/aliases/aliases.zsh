@@ -21,7 +21,7 @@ alias l='ls -al'
 alias ll='ls -al'
 alias lh='ls -Alh'
 alias -g G='| grep'
-alias -g M='| less'
+alias -g M='| more'
 alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
@@ -82,13 +82,18 @@ alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgre
 alias startredis='redis-server /usr/local/etc/redis.conf &'
 alias stoppostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
 
+# Network Utils
+aliases flushdns='sudo killall -HUP mDNSResponder'
+
 # git
 alias gpr='git pull --rebase'
 alias gcot='git checkout -t'
 alias gw='git add . && git commit -m 'WIP' && git push'
+alias gwip="git add . && git commit -m 'WIP'"
 alias patch='git format-patch HEAD^ --stdout > patch.diff'
 alias sync='git add -u . && git commit -m "Minor changes. Commit message skipped." && repush'
 alias repush="gpr && git push"
+alias gsfba='git submodule foreach git branch'
 
 
 # Bundler
