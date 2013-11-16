@@ -128,4 +128,16 @@ function g {
     git status
   fi
 }
+function gbsu {
+  branch=$(git symbolic-ref --short -q HEAD)
+
+  if [[ $# > 0 ]]
+  then
+    target=$1
+  else
+    target=$branch
+  fi
+
+  git branch --set-upstream-to=origin/$target $branch
+}
 compdef g=git
