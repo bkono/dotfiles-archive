@@ -128,6 +128,7 @@ alias s="rspec"
 alias z="zeus"
 
 # Process management
+alias pj='ps aux | grep java'
 function sstart() {
   cat /dev/null > $1.pid
   nohup $1 &
