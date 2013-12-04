@@ -82,6 +82,7 @@ export EDITOR='subl -w'
 export COPYFILE_DISABLE=true
 export RBENV_ROOT=/usr/local/Cellar/rbenv/0.4.0/
 export ANDROID_HOME="/Users/bkonowitz/lib/adt/current/sdk"
+export JETTY_HOME="/Users/bkonowitz/Servers/jetty"
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
