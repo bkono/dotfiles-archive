@@ -102,6 +102,7 @@ alias gcfn='git clean -f -d -n'
 alias gcf='git clean -f -d'
 alias gcl='git clone'
 alias gcm="git commit -m"
+alias gcam="git commit -am"
 alias gdm='git diff master'
 alias gf='git fetch'
 alias gm='git checkout master'

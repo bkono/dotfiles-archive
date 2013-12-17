@@ -105,7 +105,7 @@ alias bu='bundle update'
 alias rebi='bundle install && !!'
 
 # Tests and Specs
-alias t="ruby -I test"
+alias t="bundle exec rspec"
 alias cuc="bundle exec cucumber"
 
 # Rubygems
