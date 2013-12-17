@@ -32,6 +32,7 @@ alias get='sudo apt-get install'
 alias remore='!! | more'
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias sz='source ~/.zshrc && source ~/.zlogin'
+alias pj='ps aux | grep java'
 
 # Path Shortcuts
 alias code='cd ~/code'
