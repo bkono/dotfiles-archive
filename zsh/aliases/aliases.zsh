@@ -33,6 +33,9 @@ alias remore='!! | more'
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
 alias sz='source ~/.zshrc && source ~/.zlogin'
 alias pj='ps aux | grep java'
+alias pkj='pkill java'
+alias pkr='pkill rails'
+alias pkjr='pkill jruby'
 
 # Path Shortcuts
 alias code='cd ~/code'
