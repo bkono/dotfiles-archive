@@ -28,6 +28,7 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 alias v='vim'
 alias vi='vim'
+alias es='subl'
 alias get='sudo apt-get install'
 alias remore='!! | more'
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *'
