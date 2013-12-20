@@ -112,6 +112,7 @@ alias rebi='bundle install && !!'
 # Tests and Specs
 alias t="bundle exec rspec"
 alias cuc="bundle exec cucumber"
+alias ber="bundle exec rspec"
 
 # Rubygems
 alias gi="gem install"
