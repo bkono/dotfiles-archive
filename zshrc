@@ -48,7 +48,8 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
-plugins=(ruby brew bundler gem heroku node npm osx svn rake rbenv mvn sublime)
+plugins=(brew bundler gem heroku node npm osx rbenv mvn sublime)
+# plugins=(ruby brew bundler gem heroku node npm osx svn rake rbenv mvn sublime)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -75,8 +76,9 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:~
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home"
 export JAVA_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M"
-export MAVEN_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M"
+export MAVEN_OPTS=${JAVA_OPTS}
 export M2_HOME="/usr/local/Cellar/maven30/3.0.5/libexec"
+export SBT_OPTS=${JAVA_OPTS}
 #export M2_HOME="/usr/local/Cellar/maven/3.1.0/libexec"
 # export M2_HOME="/usr/share/maven/"
 export EDITOR='subl -w'
