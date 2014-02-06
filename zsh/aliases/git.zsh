@@ -105,11 +105,13 @@ alias gcm="git commit -m"
 alias gcam="git commit -am"
 alias gdm='git diff master'
 alias gf='git fetch'
+alias glgs=pretty_git_log -5
 alias gm='git checkout master'
 alias gm!='git merge'
 alias gta='git tag -a'
 alias gpt='git push --tags origin master'
 alias gsa='git submodule add'
+alias gsdi='git submodule deinit'
 alias gsi='git submodule init'
 alias gsu='git submodule update'
 alias gsfe='git submodule foreach'
@@ -118,7 +120,6 @@ alias gsfco='git submodule foreach git checkout'
 alias gsfm='git submodule foreach git checkout master'
 alias gsfp='git submodule foreach git pull'
 alias gsfp!='git submodule foreach git push'
-alias glgs=pretty_git_log -5
 
 # Deprecated
 alias gl='echo "Use gp instead"'
