@@ -118,6 +118,7 @@ alias gsfco='git submodule foreach git checkout'
 alias gsfm='git submodule foreach git checkout master'
 alias gsfp='git submodule foreach git pull'
 alias gsfp!='git submodule foreach git push'
+alias glgs=pretty_git_log -5
 
 # Deprecated
 alias gl='echo "Use gp instead"'

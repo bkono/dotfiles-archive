@@ -64,6 +64,8 @@ for function in ~/.zsh/functions/*.zsh; do
 done
 #source $HOME/.dotfiles/zsh/functions
 
+source ~/.githelpers
+
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 
