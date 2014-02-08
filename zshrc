@@ -142,4 +142,4 @@ bindkey "^F" vi-cmd-mode
 #[[ -f ~/.aliases ]] && source ~/.aliases
 #
 ## Local config
-#[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

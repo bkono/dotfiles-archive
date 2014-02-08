@@ -60,6 +60,7 @@ alias dpsl='ssh ubuntu@sandbox0-sl'
 alias log='ssh ubuntu@log'
 alias pre='ssh ubuntu@preview'
 alias uat='ssh ubuntu@uat'
+alias cpunraid='ssh -L 4200:localhost:4243 root@unraid-bk.local'
 
 # File Shortcuts
 alias aliases='vim ~/.dotfiles/zsh/aliases'
@@ -99,6 +100,8 @@ alias patch='git format-patch HEAD^ --stdout > patch.diff'
 alias sync='git add -u . && git commit -m "Minor changes. Commit message skipped." && repush'
 alias repush="gpr && git push"
 alias gsfba='git submodule foreach git branch'
+alias gsp='git stash pop'
+alias gs='git stash'
 
 
 # Bundler
