@@ -90,6 +90,10 @@ export COPYFILE_DISABLE=true
 export ANDROID_HOME="/Users/bkonowitz/lib/adt/current/sdk"
 export JETTY_HOME="/Users/bkonowitz/servers/jetty/current"
 
+## Local config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# must come after the local config sourcing to allow RBENV to be set there
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 # Shaves about 0.5s off Rails boot time (when using perf patch). Taken from https://gist.github.com/1688857
@@ -141,5 +145,3 @@ bindkey "^F" vi-cmd-mode
 ## aliases
 #[[ -f ~/.aliases ]] && source ~/.aliases
 #
-## Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
