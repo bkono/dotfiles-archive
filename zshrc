@@ -26,7 +26,7 @@ chpwd() {
 # Save a ton of history
 HISTSIZE=20000
 HISTFILE=~/.zsh_history
-SAVEHIST=20000
+SAVEHIST=$HISTSIZE
 
 # automatically enter directories without cd
 setopt auto_cd

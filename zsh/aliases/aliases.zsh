@@ -94,8 +94,8 @@ alias flushdns='sudo killall -HUP mDNSResponder'
 # git
 alias gpr='git pull --rebase'
 alias gcot='git checkout -t'
-alias gw='git add . && git commit -m 'WIP' && git push'
-alias gwip="git add . && git commit -m 'WIP'"
+alias gw='git add --all . && git commit -m 'WIP' && git push'
+alias gwip="git add --all . && git commit -m 'WIP'"
 alias patch='git format-patch HEAD^ --stdout > patch.diff'
 alias sync='git add -u . && git commit -m "Minor changes. Commit message skipped." && repush'
 alias repush="gpr && git push"

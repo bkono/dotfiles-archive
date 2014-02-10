@@ -96,7 +96,7 @@ function _git_log_prettily(){
 alias glp="_git_log_prettily"
 compdef _git glp=git-log
 
-alias gaa='git add .'
+alias gaa='git add --all .'
 alias gaad='git ls-files --deleted | xargs git rm'
 alias gcfn='git clean -f -d -n'
 alias gcf='git clean -f -d'
