@@ -86,7 +86,7 @@ export SBT_OPTS=${JAVA_OPTS}
 export EDITOR='subl -w'
 export COPYFILE_DISABLE=true
 #export RBENV_ROOT=/usr/local/Cellar/rbenv/0.4.0/
-export RBENV_ROOT=/usr/local/var/rbenv/
+#export RBENV_ROOT=/usr/local/var/rbenv/
 export ANDROID_HOME="/Users/bkonowitz/lib/adt/current/sdk"
 export JETTY_HOME="/Users/bkonowitz/servers/jetty/current"
 
