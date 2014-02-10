@@ -21,6 +21,7 @@ set showmatch
 set visualbell
 set noerrorbells
 set cursorline
+set tags=tags;/   " get ctags to look up through the directory structure
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
