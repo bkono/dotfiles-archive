@@ -20,6 +20,7 @@ set guioptions-=T
 set showmatch
 set visualbell
 set noerrorbells
+set cursorline
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -70,6 +71,7 @@ map <Leader>sn :e ~/.vim/snippets/ruby.snippets<CR>
 map <Leader>vi :tabe ~/.vimrc<CR>
 map <Leader>vib :tabe ~/.vimrc.bundles<CR>
 map <Leader>task :sp ~/Dropbox/Notes/tasks.md<CR>
+map <leader>md :!open -a Marked %<cr><cr>
 
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
@@ -146,12 +148,19 @@ colorscheme Tomorrow-Night
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
+" hint to keep lines short
+if exists('+colorcolumn')
+  set colorcolumn=80
+endif
+
 " Numbers
 set number
 set numberwidth=5
+set relativenumber
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
+
 
 set wildignore+=*/tmp/*,*/target/*,*.so,*.swp,*.zip
 
@@ -322,6 +331,14 @@ function! RenameFile()
 endfunction
 map <Leader>n :call RenameFile()<cr>
 
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+nnoremap <C-n> :call NumberToggle()<cr>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
