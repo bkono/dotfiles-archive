@@ -23,6 +23,9 @@ set noerrorbells
 set cursorline
 set tags=tags;/   " get ctags to look up through the directory structure
 
+let g:scala_sort_across_groups=1 " vim-scala sorting plugin for 1st order grouping
+" let g:scala_first_party_namespaces='\(controllers\|views\|models\|util\|de.\)' " default sorting for above
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
