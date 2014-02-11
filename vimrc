@@ -56,7 +56,6 @@ map <Leader>rd :!bundle exec rspec % --format documentation<CR>
 map <Leader>rs :vsp <C-r>#<cr><C-w>w
 map <Leader>so :so %<cr>
 map <Leader>sov :so ~/.vimrc<cr>
-map <Leader>t :w<cr>:call RunCurrentTest()<CR>
 map <Leader>st :!mvn -Dsuites=com.oddz.api.GameplayApiEndpointSpec test<CR>
 map <Leader>u :Runittest<cr>
 map <Leader>w <C-w>w
@@ -83,8 +82,8 @@ map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
-map <C-h> :nohl<cr>
-imap <C-l> :<Space>
+map <Leader>hl :nohl<cr>
+" imap <C-l> :<Space>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 map <C-t> <esc>:tabnew<CR>
@@ -149,7 +148,7 @@ endif
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " bind \ (backward slash) to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+" command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
 
 " Color scheme
@@ -255,7 +254,7 @@ cmap q1 q!
 map Q <Nop>
 
 " Disable K looking stuff up
-map K <Nop>
+" map K <Nop>
 
 " (Hopefully) removes the delay when hitting esc in insert mode
 set noesckeys
