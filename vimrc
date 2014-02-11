@@ -146,6 +146,11 @@ if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" bind \ (backward slash) to grep shortcut
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap \ :Ag<SPACE>
 
 " Color scheme
 colorscheme Tomorrow-Night
@@ -162,9 +167,16 @@ endif
 set relativenumber
 set numberwidth=5
 
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+nnoremap <C-n> :call NumberToggle()<cr>
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
-
 
 set wildignore+=*/tmp/*,*/target/*,*.so,*.swp,*.zip
 
@@ -339,15 +351,6 @@ function! RenameFile()
     endif
 endfunction
 map <Leader>n :call RenameFile()<cr>
-
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-nnoremap <C-n> :call NumberToggle()<cr>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
