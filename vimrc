@@ -355,6 +355,9 @@ function! RenameFile()
 endfunction
 map <Leader>n :call RenameFile()<cr>
 
+" Make change commands insert a $ marker instead of just overwriting
+set cpoptions=ces$
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
