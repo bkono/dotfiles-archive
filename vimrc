@@ -22,6 +22,11 @@ set visualbell
 set noerrorbells
 set cursorline
 set tags=tags;/   " get ctags to look up through the directory structure
+set autoread      " automtically read changed files
+
+" When the page starts to scroll, keep the cursor 6 lines from the top and
+" bottom
+set scrolloff=6
 
 let g:scala_sort_across_groups=1 " vim-scala sorting plugin for 1st order grouping
 " let g:scala_first_party_namespaces='\(controllers\|views\|models\|util\|de.\)' " default sorting for above
@@ -82,7 +87,7 @@ map <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 map <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
-map <Leader>hl :nohl<cr>
+map <Leader>n :nohl<cr>
 " imap <C-l> :<Space>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
@@ -243,7 +248,10 @@ let g:syntastic_check_on_open=1
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
 " Highlight the status line
-highlight StatusLine ctermfg=blue ctermbg=yellow
+highlight StatusLine ctermfg=black ctermbg=yellow
+
+" status line setup with git info
+set stl=%f\ %m\ %r%{fugitive#statusline()}\ Line:%l/%L[%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
 
 " Format xml files
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
@@ -353,7 +361,7 @@ function! RenameFile()
         redraw!
     endif
 endfunction
-map <Leader>n :call RenameFile()<cr>
+map <Leader>rn :call RenameFile()<cr>
 
 " Make change commands insert a $ marker instead of just overwriting
 set cpoptions=ces$
