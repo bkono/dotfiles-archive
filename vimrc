@@ -7,7 +7,8 @@ set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=500
 set ruler         " show the cursor position all the time
-set showcmd       " display incomplete commands
+" set showcmd       " display incomplete commands
+set lazyredraw
 set incsearch     " do incremental searching
 set hlsearch     " do incremental searching
 set laststatus=2  " Always display the status line
@@ -61,12 +62,11 @@ map <Leader>rd :!bundle exec rspec % --format documentation<CR>
 map <Leader>rs :vsp <C-r>#<cr><C-w>w
 map <Leader>so :so %<cr>
 map <Leader>sov :so ~/.vimrc<cr>
-map <Leader>st :!mvn -Dsuites=com.oddz.api.GameplayApiEndpointSpec test<CR>
+" map <Leader>st :!mvn -Dsuites=com.oddz.api.GameplayApiEndpointSpec test<CR>
 map <Leader>u :Runittest<cr>
 map <Leader>w <C-w>w
 map <Leader>x :exec getline(".")<cr>
 map <Leader>spell :setlocal spell! spelllang=en_us<CR>
-
 
 " File shortcuts
 map <Leader>cn :e ~/Dropbox/Notes/coding-notes.md<cr> " Consider making this project specific
@@ -100,6 +100,11 @@ map <C-p> :cp<CR>
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
 
+" Underline the current line with '='
+nmap <silent> ,u= :t.\|s/./=/g\|:nohls<cr>
+nmap <silent> ,u- :t.\|s/./-/g\|:nohls<cr>
+nmap <silent> ,u~ :t.\|s/./\\~/g\|:nohls<cr>
+
 filetype plugin indent on
 
 augroup vimrcEx
@@ -125,7 +130,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile *.md set filetype=markdown
 
   " Enable spellchecking for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal spell
+  " autocmd BufRead,BufNewFile *.md setlocal spell
 
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
@@ -157,8 +162,31 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
 
+
+"-----------------------------------------------------------------------------
+" CtrlP Settings
+"-----------------------------------------------------------------------------
+let g:ctrlp_switch_buffer = 'E'
+let g:ctrlp_tabpage_position = 'c'
+let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_root_markers = ['.project.root']
+let g:ctrlp_custom_ignore = '\v%(/\.%(git|hg|svn)|\.%(class|o|png|jpg|jpeg|bmp|tar|jar|tgz|deb|zip)$|/target/)'
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_open_multiple_files = '1ri'
+let g:ctrlp_match_window = 'max:40'
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtSelectMove("j")':   ['<c-n>'],
+  \ 'PrtSelectMove("k")':   ['<c-p>'],
+  \ 'PrtHistory(-1)':       ['<c-j>', '<down>'],
+  \ 'PrtHistory(1)':        ['<c-i>', '<up>']
+  \ }
 " fix root path of CtrlP plugin
 let g:ctrlp_working_path_mode = ''
+
+map ,fb :CtrlPBuffer<cr>
+map ,fr :CtrlP .<cr>
+map ,ff :CtrlP<cr>
+map ,fm :CtrlPMixed<cr>
 
 " Color scheme
 colorscheme Tomorrow-Night
@@ -171,7 +199,6 @@ if exists('+colorcolumn')
 endif
 
 " Numbers
-" set number
 set relativenumber
 set numberwidth=5
 
