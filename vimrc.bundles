@@ -29,6 +29,7 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-rbenv.git'
 Bundle 'jgdavey/tslime.vim'
+Bundle 'SirVer/ultisnips'
 
 " My bundles
 " Bundle 'ervandew/supertab'
