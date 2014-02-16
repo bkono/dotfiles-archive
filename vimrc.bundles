@@ -30,6 +30,7 @@ Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-rbenv.git'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'SirVer/ultisnips'
+Bundle 'Valloric/YouCompleteMe'
 
 " My bundles
 " Bundle 'ervandew/supertab'
