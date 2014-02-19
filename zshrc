@@ -19,7 +19,6 @@ setopt cdablevars
 
 # Show contents of directory after cd-ing into it
 chpwd() {
-  # ls -lrthG
   ls -al
 }
 
@@ -41,6 +40,9 @@ bindkey "^R" history-incremental-search-backward
 # add some readline keys back
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
+#
+# vi mode
+bindkey "^F" vi-cmd-mode
 
 # handy keybindings
 bindkey "^P" history-search-backward
@@ -48,10 +50,14 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
-plugins=(brew bundler gem heroku node npm osx rbenv mvn sublime)
+# plugins=(brew bundler gem heroku node npm osx mvn sublime)
 # plugins=(ruby brew bundler gem heroku node npm osx svn rake rbenv mvn sublime)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
+
+# completion
+autoload -U compinit
+compinit
 
 # Source my custom files after oh-my-zsh so I can override things.
 for alias in ~/.zsh/aliases/*.zsh; do
@@ -69,10 +75,6 @@ source ~/.githelpers
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 
-# completion
-autoload -U compinit
-compinit
-
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:~/lib/play/current
 
@@ -81,12 +83,8 @@ export JAVA_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M"
 export MAVEN_OPTS=${JAVA_OPTS}
 export M2_HOME="/usr/local/Cellar/maven30/3.0.5/libexec"
 export SBT_OPTS=${JAVA_OPTS}
-#export M2_HOME="/usr/local/Cellar/maven/3.1.0/libexec"
-# export M2_HOME="/usr/share/maven/"
 export EDITOR='subl -w'
 export COPYFILE_DISABLE=true
-#export RBENV_ROOT=/usr/local/Cellar/rbenv/0.4.0/
-#export RBENV_ROOT=/usr/local/var/rbenv/
 export ANDROID_HOME="/Users/bkonowitz/lib/adt/current/sdk"
 export JETTY_HOME="/Users/bkonowitz/servers/jetty/current"
 
@@ -102,46 +100,3 @@ export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
-
-
-## original from thoughtbot
-
-
-# vi mode
-# bindkey -v
-bindkey "^F" vi-cmd-mode
-# bindkey jj vi-cmd-mode
-#
-## expand functions in the prompt
-#setopt prompt_subst
-#
-## prompt
-# export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
-#
-## ignore duplicate history entries
-#setopt histignoredups
-#
-## keep TONS of history
-#export HISTSIZE=4096
-#
-## look for ey config in project dirs
-#export EYRC=./.eyrc
-#
-## automatically pushd
-#setopt auto_pushd
-#export dirstacksize=5
-#
-## awesome cd movements from zshkit
-#setopt AUTOCD
-#setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
-#setopt cdablevars
-
-# Try to correct command line spelling
-#setopt CORRECT CORRECT_ALL
-#
-## Enable extended globbing
-#setopt EXTENDED_GLOB
-#
-## aliases
-#[[ -f ~/.aliases ]] && source ~/.aliases
-#
