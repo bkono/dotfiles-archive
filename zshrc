@@ -27,6 +27,15 @@ HISTSIZE=20000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 
+setopt append_history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups # ignore duplication command history list
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history # share command history data
+
 # automatically enter directories without cd
 setopt auto_cd
 
@@ -49,6 +58,29 @@ bindkey "^P" history-search-backward
 bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
+
+# make search up and down work, so partially type and hit up/down to find relevant stuff
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
+
+bindkey "^[[H" beginning-of-line
+bindkey "^[[1~" beginning-of-line
+bindkey "^[OH" beginning-of-line
+bindkey "^[[F"  end-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[OF" end-of-line
+bindkey ' ' magic-space    # also do history expansion on space
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+bindkey '^[[Z' reverse-menu-complete
+
+# Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
+bindkey '^?' backward-delete-char
+bindkey "^[[3~" delete-char
+bindkey "^[3;5~" delete-char
+bindkey "\e[3~" delete-char
 
 # plugins=(brew bundler gem heroku node npm osx mvn sublime)
 # plugins=(ruby brew bundler gem heroku node npm osx svn rake rbenv mvn sublime)
@@ -91,6 +123,8 @@ export EDITOR='subl -w'
 export COPYFILE_DISABLE=true
 export ANDROID_HOME="/Users/bkonowitz/lib/adt/current/sdk"
 export JETTY_HOME="/Users/bkonowitz/servers/jetty/current"
+
+source ~/.zlogin
 
 ## Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
