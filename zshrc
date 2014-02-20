@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.dotfiles/.oh-my-zsh
+# ZSH=$HOME/.dotfiles/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -70,13 +70,17 @@ for function in ~/.zsh/functions/*.zsh; do
 done
 #source $HOME/.dotfiles/zsh/functions
 
+for script in ~/.zsh/lib/*.zsh; do
+  source $script
+done
+
 source ~/.githelpers
 
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:~/lib/play/current
+export PATH=./bin:/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:~/lib/play/current
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home"
 export JAVA_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M"
