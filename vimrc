@@ -390,6 +390,12 @@ function! RenameFile()
 endfunction
 map <Leader>rn :call RenameFile()<cr>
 
+" Write and create dirs if necessary
+function WriteAndCreateDirs()
+  execute ':!mkdir -p %:h'
+  write
+endfunction
+
 " Make change commands insert a $ marker instead of just overwriting
 set cpoptions=ces$
 
