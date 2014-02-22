@@ -131,7 +131,7 @@ source ~/.zlogin
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # must come after the local config sourcing to allow RBENV to be set there
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
 # Shaves about 0.5s off Rails boot time (when using perf patch). Taken from https://gist.github.com/1688857
 export RUBY_HEAP_MIN_SLOTS=1000000
