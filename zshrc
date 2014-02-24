@@ -114,7 +114,7 @@ fpath=(~/.zsh/completion $fpath)
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:~/lib/play/current
 
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
 export JAVA_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M"
 export MAVEN_OPTS=${JAVA_OPTS}
 export M2_HOME="/usr/local/Cellar/maven/3.1.1/libexec"
