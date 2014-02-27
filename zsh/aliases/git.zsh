@@ -118,7 +118,7 @@ alias gsfe='git submodule foreach'
 alias gsfb='git submodule foreach git checkout -b'
 alias gsfco='git submodule foreach git checkout'
 alias gsfm='git submodule foreach git checkout master'
-alias gsfp='git submodule foreach git pull'
+alias gsfp='git submodule foreach git pull --rebase'
 alias gsfp!='git submodule foreach git push'
 
 # Deprecated
