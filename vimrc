@@ -29,8 +29,6 @@ set autoread      " automtically read changed files
 " bottom
 set scrolloff=6
 
-let g:scala_sort_across_groups=1 " vim-scala sorting plugin for 1st order grouping
-" let g:scala_first_party_namespaces='\(controllers\|views\|models\|util\|de.\)' " default sorting for above
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -278,7 +276,8 @@ let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;
 highlight StatusLine ctermfg=black ctermbg=yellow
 
 " status line setup with git info
-set stl=%f\ %m\ %r%{fugitive#statusline()}\ Line:%l/%L[%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
+" set stl=%f\ %m\ %r%{fugitive#statusline()}\ Line:%l/%L[%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
+set stl=%f\ %m\ Line:%l/%L[%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
 
 " Format xml files
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
@@ -375,6 +374,15 @@ autocmd User Rails Rnavcommand jview       app/assets/javascripts/views       -g
 autocmd User Rails Rnavcommand jcollection app/assets/javascripts/collections -glob=**/*  -suffix=.coffee
 autocmd User Rails Rnavcommand jrouter     app/assets/javascripts/routers     -glob=**/*  -suffix=.coffee
 autocmd User Rails Rnavcommand jspec       spec/javascripts                   -glob=**/*  -suffix=.coffee
+
+" FileType configs
+" autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+" autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+" autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+" Scala
+let g:scala_sort_across_groups=1 " vim-scala sorting plugin for 1st order grouping
+" let g:scala_first_party_namespaces='\(controllers\|views\|models\|util\|de.\)' " default sorting for above
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE (thanks Gary Bernhardt)
