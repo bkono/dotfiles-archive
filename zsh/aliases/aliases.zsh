@@ -92,6 +92,9 @@ alias startpostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgre
 alias startredis='redis-server /usr/local/etc/redis.conf &'
 alias stoppostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
 
+# tmux
+alias tls='tmux ls'
+
 # Network Utils
 alias flushdns='sudo killall -HUP mDNSResponder'
 
