@@ -77,6 +77,7 @@ alias mcp='mvn clean package'
 alias mcpnt='mvn clean package -DskipUnitTests=true -DskipItTests=true -Dmaven.test.skip=true'
 alias mcint='mvn clean install -DskipUnitTests=true -DskipItTests=true -Dmaven.test.skip=true'
 alias mt='mvn test'
+alias mtt='mt | tee test_output.log'
 
 # Ruby
 alias fs='foreman start'
