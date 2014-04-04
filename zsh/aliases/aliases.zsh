@@ -37,6 +37,7 @@ alias pj='ps aux | grep java'
 alias pkj='pkill java'
 alias pkr='pkill rails'
 alias pkjr='pkill jruby'
+alias watch='watch -n 1 '
 
 # Path Shortcuts
 alias code='cd ~/code'
@@ -69,6 +70,8 @@ alias ideas='vim ~/Dropbox/Notes/ideas.txt'
 alias tsl='vim ~/Dropbox/Notes/tool_sharpening_list.md'
 
 # Maven shortctus
+alias mc='mvn compile'
+alias mcc='mvn clean compile'
 alias mci='mvn clean install'
 alias mi='mvn install'
 alias mp='mvn package'
@@ -78,6 +81,7 @@ alias mcpnt='mvn clean package -DskipUnitTests=true -DskipItTests=true -Dmaven.t
 alias mcint='mvn clean install -DskipUnitTests=true -DskipItTests=true -Dmaven.test.skip=true'
 alias mt='mvn test'
 alias mtt='mt | tee test_output.log'
+alias mvt='mvn verify | tee test_output.log'
 
 # Ruby
 alias fs='foreman start'
@@ -98,6 +102,9 @@ alias tls='tmux ls'
 
 # Network Utils
 alias flushdns='sudo killall -HUP mDNSResponder'
+alias bouncenet='sudo ifconfig en0 down;sudo ifconfig en0 up'
+alias wifi='networksetup -setairportpower en0'
+alias checkvpn='route get 0/1 && route get 128.0/1'
 
 # git
 alias gpr='git pull --rebase'
