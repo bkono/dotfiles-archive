@@ -120,6 +120,9 @@ alias gsp='git stash pop'
 alias gs='git stash'
 alias gscfn='gsfe git clean -fxdn'
 alias gscf='gsfe git clean -fxd'
+alias gdt='git difftool'
+alias gmt='git mergetool'
+alias grbs='git rebase --skip'
 
 # Bundler
 alias b="bundle"
