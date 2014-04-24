@@ -123,6 +123,7 @@ alias gscf='gsfe git clean -fxd'
 alias gdt='git difftool'
 alias gmt='git mergetool'
 alias grbs='git rebase --skip'
+alias gsui='git submodule update --init'
 
 # Bundler
 alias b="bundle"
