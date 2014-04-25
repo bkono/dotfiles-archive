@@ -14,16 +14,16 @@ function mk-scala-dir() {
     fi
     cd $1
   fi
-  mkdir -p src/main/{resources,scala}
-  mkdir -p test/{resources,scala}
+  mkdir -p src/{main,test}/scala/com/example
+  mkdir -p src/{main,test}/resources
   mkdir -p project/
   echo "... directories built"
 
   touch build.sbt
   printf 'name := "sample"\n\n' >> build.sbt
   printf 'version := "0.1-SNAPSHOT"\n\n' >>build.sbt
-  printf 'scalaVersion := "2.10.3"\n' >> build.sbt
-  printf 'scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")' >> build.sbt
+  printf 'scalaVersion := "2.10.3"\n\n' >> build.sbt
+  printf 'scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")\n' >> build.sbt
   echo "... build.sbt boilerplate added"
 
   touch project/build.properties
@@ -35,8 +35,8 @@ function mk-scala-dir() {
   echo 'import sbtassembly.Plugin._\nimport AssemblyKeys._\n\nassemblySettings\n\nmainClass in assembly := Some("com.example.Boot")\n\njarName in assembly := "example-service.jar"' > assembly.sbt
   echo "... basic plugins added"
 
-  touch src/main/scala/boot.scala
-  printf 'package com.example.Boot\n\nobject Boot {\n\tdef main(args: Array[String]) = println("Ohai!")\n}' >> src/main/scala/boot.scala
+  touch src/main/scala/com/example/boot.scala
+  printf 'package com.example\n\nobject Boot {\n\tdef main(args: Array[String]) = println("Ohai!")\n}' >> src/main/scala/com/example/boot.scala
   echo "... boot.scala placeholder created"
 
   echo "... done!\n"
