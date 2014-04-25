@@ -24,6 +24,11 @@ function mk-scala-dir() {
   printf 'version := "0.1-SNAPSHOT"\n\n' >>build.sbt
   printf 'scalaVersion := "2.10.3"\n\n' >> build.sbt
   printf 'scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")\n' >> build.sbt
+  printf 'resolvers ++= Seq('
+  printf '"sonatype releases"  at "https://oss.sonatype.org/content/repositories/releases",'
+  printf '"sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",'
+  printf '"typesafe repo"      at "http://repo.typesafe.com/typesafe/releases/"'
+  printf ')'
   echo "... build.sbt boilerplate added"
 
   touch project/build.properties
