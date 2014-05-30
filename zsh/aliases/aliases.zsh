@@ -21,6 +21,7 @@ alias l='ls -al'
 alias ll='ls -al'
 alias lh='ls -Alh'
 alias -g G='| grep'
+alias -g G2='| grep -C2'
 alias -g M='| more'
 alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
@@ -28,7 +29,6 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 alias v='vim'
 alias vi='vim'
-alias es='subl'
 alias get='sudo apt-get install'
 alias remore='!! | more'
 alias retag='ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp --exclude=target --exclude=vendor *'
@@ -152,6 +152,10 @@ alias rs='bundle install && rails server -p 3000'
 alias s="rspec"
 alias z="zeus"
 
+# Oddz
+alias ods-lock='gsfe --recursive mvn versions:set; gsfe --recursive mvn versions:resolve-ranges versions:update-properties'
+alias ods-revert='gsfe --recursive mvn versions:revert'
+
 # Process management
 alias pj='ps aux | grep java'
 function sstart() {
@@ -172,6 +176,7 @@ function wpid() {
   echo $! > $1.pid
 }
 
+function es() { subl "${1:-.}"; }
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
