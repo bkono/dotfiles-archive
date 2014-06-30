@@ -116,6 +116,7 @@ alias sync='git add -u . && git commit -m "Minor changes. Commit message skipped
 alias repush="gpr && git push"
 alias gsfba='git submodule foreach git branch'
 alias gsfnm='git submodule foreach git branch | grep -v "* master"'
+alias gcd='git checkout dev'
 alias gsp='git stash pop'
 alias gs='git stash'
 alias gscfn='gsfe git clean -fxdn'

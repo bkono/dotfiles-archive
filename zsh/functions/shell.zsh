@@ -7,3 +7,5 @@ function tophist() {
 function used-ports() {
   lsof -i | grep LISTEN
 }
+
+function kj() { ps aux | grep java | grep $* | awk '{print $2}' | xargs kill -9 }
