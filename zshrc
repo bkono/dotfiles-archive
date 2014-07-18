@@ -112,12 +112,12 @@ source ~/.githelpers
 fpath=(~/.zsh/completion $fpath)
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:~/lib/play/current:/Applications/Postgres.app/Contents/Versions/9.3/bin
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres93.app/Contents/MacOS/bin
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
 export JAVA_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M"
 export MAVEN_OPTS=${JAVA_OPTS}
-export M2_HOME="/usr/local/Cellar/maven/3.1.1/libexec"
+export M2_HOME="/usr/local/Cellar/maven31/3.1.1/libexec"
 export SBT_OPTS=${JAVA_OPTS}
 export EDITOR='subl -w'
 export COPYFILE_DISABLE=true
