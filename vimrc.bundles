@@ -28,7 +28,7 @@ Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-rbenv.git'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'tsaleh/vim-matchit'
+" Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/tComment'
 
