@@ -122,7 +122,7 @@ export SBT_OPTS=${JAVA_OPTS}
 export EDITOR='subl -w'
 export COPYFILE_DISABLE=true
 export ANDROID_HOME="/Users/bkonowitz/lib/adt/current/sdk"
-export JETTY_HOME="/Users/bkonowitz/servers/jetty/current"
+export JETTY_HOME="/Users/bkonowitz/servers/jetty"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 source ~/.zlogin
@@ -133,6 +133,7 @@ source ~/.zlogin
 # must come after the local config sourcing to allow RBENV to be set there
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
+export JRUBY_OPTS="-J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1"
 # Shaves about 0.5s off Rails boot time (when using perf patch). Taken from https://gist.github.com/1688857
 export RUBY_GC_HEAP_INIT_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
