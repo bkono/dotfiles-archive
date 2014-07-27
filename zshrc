@@ -131,7 +131,7 @@ source ~/.zlogin
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # must come after the local config sourcing to allow RBENV to be set there
-if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh --no-rehash)"; fi
 
 export JRUBY_OPTS="-J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1"
 # Shaves about 0.5s off Rails boot time (when using perf patch). Taken from https://gist.github.com/1688857
