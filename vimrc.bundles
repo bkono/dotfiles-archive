@@ -31,6 +31,7 @@ Bundle 'tpope/vim-unimpaired'
 " Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/tComment'
+Bundle 'elixir-lang/vim-elixir'
 
 " My bundles
 " Bundle 'ervandew/supertab'
