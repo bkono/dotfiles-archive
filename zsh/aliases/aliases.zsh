@@ -69,6 +69,11 @@ alias codereview='vim ~/Dropbox/Notes/code-review-checklist.txt'
 alias ideas='vim ~/Dropbox/Notes/ideas.txt'
 alias tsl='vim ~/Dropbox/Notes/tool_sharpening_list.md'
 
+# brew shortcuts
+alias bci='brew cask install'
+alias bcs='brew cask search'
+alias bcu='brew cask uninstall'
+
 # Maven shortctus
 alias mc='mvn compile'
 alias mcc='mvn clean compile'
