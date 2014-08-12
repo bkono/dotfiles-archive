@@ -33,7 +33,6 @@ set t_ti= t_te=
 " Force utf-8 encoding
 set encoding=utf-8
 
-
 " When the page starts to scroll, keep the cursor 6 lines from the top and
 " bottom
 set scrolloff=6
@@ -159,6 +158,17 @@ nmap <silent> ,u= :t.\|s/./=/g\|:nohls<cr>
 nmap <silent> ,u- :t.\|s/./-/g\|:nohls<cr>
 nmap <silent> ,u~ :t.\|s/./\\~/g\|:nohls<cr>
 
+" Tabular.vim
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a=> :Tabularize /=><CR>
+vmap <Leader>a=> :Tabularize /=><CR>
+nmap <Leader>a-> :Tabularize /-><CR>
+vmap <Leader>a-> :Tabularize /-><CR>
+nmap <Leader>a: :Tabularize /:\zs/l0l1<CR>
+vmap <Leader>a: :Tabularize /:\zs/l0l1<CR>
+nmap <Leader>a, :Tabularize /,\zs/l0l1<CR>
+vmap <Leader>a, :Tabularize /,\zs/l0l1<CR>
 filetype plugin indent on
 
 augroup vimrcEx
@@ -454,8 +464,8 @@ function! RenameFile()
 endfunction
 map <Leader>rn :call RenameFile()<cr>
 
-" Write and create dirs if necessary
-function WriteAndCreateDirs()
+" " Write and create dirs if necessary
+function! WriteAndCreateDirs()
   execute ':!mkdir -p %:h'
   write
 endfunction
@@ -463,7 +473,18 @@ endfunction
 " Make change commands insert a $ marker instead of just overwriting
 set cpoptions=ces$
 
+" Try to fix iterm2 + arrow keys issues
+nnoremap <silent> OA <Nop>
+nnoremap <silent> OB <Nop>
+nnoremap <silent> OD <Nop>
+nnoremap <silent> OC <Nop>
+inoremap <silent> OA <Nop>
+inoremap <silent> OB <Nop>
+inoremap <silent> OD <Nop>
+inoremap <silent> OC <Nop>
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
