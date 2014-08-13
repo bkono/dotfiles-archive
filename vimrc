@@ -253,9 +253,13 @@ map ,ff :CtrlP<cr>
 map ,fm :CtrlPMixed<cr>
 
 " Color scheme
-colorscheme Tomorrow-Night
-highlight NonText guibg=#060606
-highlight Folded  guibg=#0A0A0A guifg=#9090D0
+set background=dark
+" let g:solarized_termcolors=256
+colorscheme solarized
+
+" colorscheme Tomorrow-Night
+" highlight NonText guibg=#060606
+" highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 " hint to keep lines short
 if exists('+colorcolumn')

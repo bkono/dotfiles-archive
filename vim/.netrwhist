@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/bkonowitz/.dotfiles/zsh/aliases'
 let g:netrw_dirhist_2='/Users/bkonowitz/code/personal/agentp'
 let g:netrw_dirhist_3='/Users/bkonowitz/.dotfiles'
 let g:netrw_dirhist_4='/Users/bkonowitz/.dotfiles/zsh/aliases'
+let g:netrw_dirhist_5='/Users/bkonowitz/code/oddz/ods/gpn-api'
+let g:netrw_dirhist_6='/Users/bkonowitz/.dotfiles'
+let g:netrw_dirhist_7='/Users/bkonowitz/.dotfiles/vim/bundle/vim-endwise/plugin'
