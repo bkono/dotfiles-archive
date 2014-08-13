@@ -74,6 +74,9 @@ alias bci='brew cask install'
 alias bcs='brew cask search'
 alias bcu='brew cask uninstall'
 
+# installation shortcuts
+alias relaptop='bash <(curl -s https://raw.githubusercontent.com/bkonowitz/laptop/master/mac) |& tee ~/laptop.log'
+
 # Maven shortctus
 alias mc='mvn compile'
 alias mcc='mvn clean compile'
