@@ -478,14 +478,14 @@ endfunction
 set cpoptions=ces$
 
 " Try to fix iterm2 + arrow keys issues
-nnoremap <silent> OA <Nop>
-nnoremap <silent> OB <Nop>
-nnoremap <silent> OD <Nop>
-nnoremap <silent> OC <Nop>
-inoremap <silent> OA <Nop>
-inoremap <silent> OB <Nop>
-inoremap <silent> OD <Nop>
-inoremap <silent> OC <Nop>
+nnoremap <silent> OA <Up>
+nnoremap <silent> OB <Down>
+nnoremap <silent> OD <Left>
+nnoremap <silent> OC <Right>
+inoremap <silent> OA <Up>
+inoremap <silent> OB <Down>
+inoremap <silent> OD <Left>
+inoremap <silent> OC <Right>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
