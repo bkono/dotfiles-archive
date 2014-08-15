@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/bkonowitz/code/oddz/apis/oddz-gameplay-messages/ruby'
 let g:netrw_dirhist_2='/Users/bkonowitz/code/oddz/apis/oddz-horseracing-messages'
 let g:netrw_dirhist_3='/Users/bkonowitz/code/oddz/apis/oddz-horseracing-messages/ruby'
 let g:netrw_dirhist_4='/Users/bkonowitz/code/oddz/apis/oddz-horseracing-messages'
 let g:netrw_dirhist_5='/Users/bkonowitz/code/oddz/apis/oddz-account-messages'
 let g:netrw_dirhist_6='/Users/bkonowitz/code/oddz/ods/gpn-api'
+let g:netrw_dirhist_7='/Users/bkonowitz/.dotfiles/zsh/aliases'

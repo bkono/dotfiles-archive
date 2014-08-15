@@ -108,8 +108,8 @@ alias stoppostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres
 # tmux
 alias tls='tmux ls'
 alias tns='tmux new -s'
-alias ta='tmux attach -t'
 alias tks='tmux kill-session -t'
+alias tat='tmux new-session -As "$(basename "$PWD" | tr . -)"'
 
 # Network Utils
 alias flushdns='sudo killall -HUP mDNSResponder'
