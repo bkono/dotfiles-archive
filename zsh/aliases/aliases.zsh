@@ -106,6 +106,7 @@ alias startredis='redis-server /usr/local/etc/redis.conf &'
 alias stoppostgres='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
 
 # tmux
+alias ta='tmux attach -t'
 alias tls='tmux ls'
 alias tns='tmux new -s'
 alias tks='tmux kill-session -t'
