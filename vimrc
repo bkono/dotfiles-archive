@@ -107,9 +107,6 @@ map <Leader>gs :Gstatus<CR>
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>m :Rmodel
 map <Leader>o :w<cr>:call RunCurrentLineInTest()<CR>
-map <Leader>p :set paste<CR>o<esc>:r !pbpaste<CR>:set nopaste<cr>
-nmap <F2> :.w !pbcopy<CR><CR>
-vmap <F2> :w !pbcopy<CR><CR>
 map <Leader>ra :%s/
 map <Leader>rd :!bundle exec rspec % --format documentation<CR>
 map <Leader>rs :vsp <C-r>#<cr><C-w>w
@@ -120,6 +117,7 @@ map <Leader>u :Runittest<cr>
 map <Leader>w <C-w>w
 map <Leader>x :exec getline(".")<cr>
 map <Leader>spell :setlocal spell! spelllang=en_us<CR>
+map <Leader>ppjs :%! python -m json.tool
 
 " File shortcuts
 map <Leader>cn :e ~/Dropbox/Notes/coding-notes.md<cr> " Consider making this project specific
@@ -158,6 +156,9 @@ nmap <silent> ,u= :t.\|s/./=/g\|:nohls<cr>
 nmap <silent> ,u- :t.\|s/./-/g\|:nohls<cr>
 nmap <silent> ,u~ :t.\|s/./\\~/g\|:nohls<cr>
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 " Tabular.vim
 nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
@@ -170,6 +171,12 @@ vmap <Leader>a: :Tabularize /:\zs/l0l1<CR>
 nmap <Leader>a, :Tabularize /,\zs/l0l1<CR>
 vmap <Leader>a, :Tabularize /,\zs/l0l1<CR>
 filetype plugin indent on
+
+" clipboard goodies
+map <Leader>p :set paste<CR>o<esc>:r !pbpaste<CR>:set nopaste<cr>
+nmap <F2> :.w !pbcopy<CR><CR>
+vmap <F2> :w !pbcopy<CR><CR>
+set clipboard=unnamed " default yank and paste to the osx clipboard
 
 augroup vimrcEx
   autocmd!
