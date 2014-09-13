@@ -263,6 +263,7 @@ map ,fm :CtrlPMixed<cr>
 set background=dark
 " let g:solarized_termcolors=256
 colorscheme solarized
+set guifont=Source\ Code\ Pro\ for\ Powerline:h16
 
 " colorscheme Tomorrow-Night
 " highlight NonText guibg=#060606
