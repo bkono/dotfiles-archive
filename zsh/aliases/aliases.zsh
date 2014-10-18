@@ -137,6 +137,7 @@ alias gdt='git difftool'
 alias gmt='git mergetool'
 alias grbs='git rebase --skip'
 alias gsui='git submodule update --init'
+alias gib='git init --bare'
 
 # Bundler
 alias b="bundle"
