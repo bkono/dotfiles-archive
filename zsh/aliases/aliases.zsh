@@ -1,4 +1,4 @@
-# Handle the fact that this file will be used with multiple OSs
+ # Handle the fact that this file will be used with multiple OSs
 platform=`uname`
 if [[ $platform == 'Linux' ]]; then
   alias a='ls -lrth --color'
@@ -47,20 +47,6 @@ alias dr='cd ~/Dropbox'
 alias jet='cd ~/servers/jetty/'
 
 # Server Shortcuts
-alias api0='ssh ubuntu@api0-sb.oddz.int'
-alias www0='ssh ubuntu@www0-sb.oddz.int'
-alias sso0='ssh ubuntu@sso0-sb.oddz.int'
-alias apisb='ssh ubuntu@api0-sb'
-alias apisl='ssh ubuntu@api0-sl'
-alias cassb='ssh ubuntu@sso0-sb'
-alias cassl='ssh ubuntu@sso0-sl'
-alias cpsb='ssh ubuntu@www0-sb'
-alias cpsl='ssh ubuntu@www0-sl'
-alias dpsb='ssh ubuntu@sandbox0'
-alias dpsl='ssh ubuntu@sandbox0-sl'
-alias log='ssh ubuntu@log'
-alias pre='ssh ubuntu@preview'
-alias uat='ssh ubuntu@uat'
 alias cpunraid='ssh -L 4200:localhost:4243 root@unraid-bk.local'
 
 # File Shortcuts
@@ -90,6 +76,9 @@ alias mcint='mvn clean install -DskipUnitTests=true -DskipItTests=true -Dmaven.t
 alias mt='mvn test'
 alias mtt='mt | tee test_output.log'
 alias mvt='mvn verify | tee test_output.log'
+
+# Mongo
+alias mongoup='mongod --config /usr/local/etc/mongod.conf'
 
 # Ruby
 alias fs='foreman start'
