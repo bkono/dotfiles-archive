@@ -25,6 +25,7 @@ set cursorline    " highlight current line
 set cuc cul       " highlight active column
 set tags=tags;/   " get ctags to look up through the directory structure
 set autoread      " automtically read changed files
+set backspace=indent,eol,start
 
 " Prevent Vim from clobbering the scrollback buffer. See
 " " http://www.shallowsky.com/linux/noaltscreen.html
