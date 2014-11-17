@@ -81,6 +81,10 @@ alias mvt='mvn verify | tee test_output.log'
 # Mongo
 alias mongoup='mongod --config /usr/local/etc/mongod.conf'
 
+# Node
+alias ni='npm install'
+alias nis='npm install --save'
+
 # Ruby
 alias fs='foreman start'
 alias irb='irb --readline -r irb/completion'
