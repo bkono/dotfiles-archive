@@ -84,6 +84,7 @@ alias mongoup='mongod --config /usr/local/etc/mongod.conf'
 # Node
 alias ni='npm install'
 alias nis='npm install --save'
+alias nisd='npm install --save-dev'
 
 # Ruby
 alias fs='foreman start'
