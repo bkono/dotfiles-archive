@@ -177,6 +177,9 @@ nmap <Leader>a, :Tabularize /,\zs/l0l1<CR>
 vmap <Leader>a, :Tabularize /,\zs/l0l1<CR>
 filetype plugin indent on
 
+" Tagbar
+nmap <Leader>tb :TagbarToggle<CR>
+
 " clipboard goodies
 map <Leader>p :set paste<CR>o<esc>:r !pbpaste<CR>:set nopaste<cr>
 nmap <F2> :.w !pbcopy<CR><CR>
@@ -240,7 +243,7 @@ nnoremap \ :Ag<SPACE>
 
 """ Easytags config
 let g:easytags_async = 1
-
+:let g:easytags_dynamic_files = 1
 "-----------------------------------------------------------------------------
 " CtrlP Settings
 "-----------------------------------------------------------------------------

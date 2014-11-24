@@ -33,6 +33,7 @@ Bundle 'vim-scripts/tComment'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-easytags'
+Bundle 'majutsushi/tagbar'
 
 " My bundles
 " Bundle 'ervandew/supertab'
