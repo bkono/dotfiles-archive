@@ -9,23 +9,23 @@ set history=500
 set ruler         " show the cursor position all the time
 " set showcmd       " display incomplete commands
 set lazyredraw
-set incsearch     " do incremental searching
-set hlsearch     " do incremental searching
-set laststatus=2  " Always display the status line
-set autoindent " always set autoindenting on
+set incsearch            " do incremental searching
+set hlsearch             " do incremental searching
+set laststatus=2         " Always display the status line
+set autoindent           " always set autoindenting on
 set ignorecase smartcase
 set smarttab
-" set guifont=Triskweline_10:h10
 set viminfo+=!
 set guioptions-=T
 set showmatch
 set visualbell
 set noerrorbells
-set cursorline    " highlight current line
-set cuc cul       " highlight active column
-set tags=tags;/   " get ctags to look up through the directory structure
-set autoread      " automtically read changed files
+set cursorline                 " highlight current line
+set cuc cul                    " highlight active column
+set tags=tags;/                " get ctags to look up through the directory structure
+set autoread                   " automtically read changed files
 set backspace=indent,eol,start
+let g:netrw_liststyle=3        " Explorer style
 
 " Prevent Vim from clobbering the scrollback buffer. See
 " " http://www.shallowsky.com/linux/noaltscreen.html
@@ -179,6 +179,18 @@ filetype plugin indent on
 
 " Tagbar
 nmap <Leader>tb :TagbarToggle<CR>
+let g:tagbar_type_coffee = {
+    \ 'ctagstype' : 'coffee',
+    \ 'kinds'     : [
+        \ 'c:classes',
+        \ 'm:methods',
+        \ 'f:functions',
+        \ 'v:variables',
+        \ 'f:fields',
+    \ ]
+    \ }
+
+" Explorer setup
 
 " clipboard goodies
 map <Leader>p :set paste<CR>o<esc>:r !pbpaste<CR>:set nopaste<cr>
@@ -244,6 +256,7 @@ nnoremap \ :Ag<SPACE>
 """ Easytags config
 let g:easytags_async = 1
 :let g:easytags_dynamic_files = 1
+
 "-----------------------------------------------------------------------------
 " CtrlP Settings
 "-----------------------------------------------------------------------------
