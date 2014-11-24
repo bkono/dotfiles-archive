@@ -114,8 +114,8 @@ fpath=(~/.zsh/completion $fpath)
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres93.app/Contents/MacOS/bin
 
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home"
-export JAVA_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M"
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home"
+export JAVA_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M -Xss256K"
 export MAVEN_OPTS=${JAVA_OPTS}
 export M2_HOME="/usr/local/Cellar/maven/3.2.2/libexec"
 export SBT_OPTS=${JAVA_OPTS}
@@ -127,11 +127,14 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 source ~/.zlogin
 
+# Color listing
+eval $(gdircolors ~/.dir_colors)
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
 ## Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # must come after the local config sourcing to allow RBENV to be set there
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh --no-rehash)"; fi
 
 export JRUBY_OPTS="-J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1"
 # Shaves about 0.5s off Rails boot time (when using perf patch). Taken from https://gist.github.com/1688857
@@ -140,3 +143,9 @@ export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
+export PATH="$PATH:/usr/local/lib/node_modules"
+source $(brew --prefix nvm)/nvm.sh
+
+# source /usr/local/share/chruby/chruby.sh
+# source /usr/local/share/chruby/auto.sh
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh --no-rehash)"; fi
