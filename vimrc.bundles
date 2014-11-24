@@ -31,6 +31,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/tComment'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-easytags'
 
 " My bundles
 " Bundle 'ervandew/supertab'
