@@ -161,6 +161,8 @@ nmap <silent> ,u~ :t.\|s/./\\~/g\|:nohls<cr>
 cmap w!! w !sudo tee > /dev/null %
 
 " Tabular.vim
+nmap <Leader>a<Space> :Tabularize /^[^<space>]*\zs/<CR>
+vmap <Leader>a<Space> :Tabularize /^[^<space>]*\zs/<CR>
 nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
 nmap <Leader>a=> :Tabularize /=><CR>

@@ -36,10 +36,10 @@ TERM xterm-256color
 # 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
 # Background color codes:
 # 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
-NORMAL 00   # global default, although everything should be something.
-FILE 00     # normal file
-DIR 01;36   # directory
-LINK 01;37  # symbolic link.  (If you set this to 'target' instead of a
+NORMAL  00   # global default, although everything should be something.
+FILE    00     # normal file
+DIR     01;35   # directory
+LINK    01;37  # symbolic link.  (If you set this to 'target' instead of a
             # numerical value, the color is as for the file pointed to.)
 FIFO 40;33  # pipe
 SOCK 01;35  # socket
@@ -49,7 +49,7 @@ CHR 40;33;01    # character device driver
 ORPHAN 40;31;01 # symlink to nonexistent file
 
 # This is for files with execute permission:
-EXEC 01;35
+EXEC 01;31
 
 # List any file extensions like '.gz' or '.tar' that you would like ls
 # to colorize below. Put the extension, a space, and the color init string.
@@ -78,35 +78,35 @@ EXEC 01;35
 .dmg 01;31
 
 # image formats
-.jpg 01;35
-.png 01;35
-.gif 01;35
-.bmp 01;35
-.ppm 01;35
-.tga 01;35
-.xbm 01;35
-.xpm 01;35
-.tif 01;35
-.png 01;35
-.mpg 01;35
-.avi 01;35
-.fli 01;35
-.gl 01;35
-.dl 01;35
-.pdf 01;35
+.jpg 00;33
+.png 00;33
+.gif 00;33
+.bmp 00;33
+.ppm 00;33
+.tga 00;33
+.xbm 00;33
+.xpm 00;33
+.tif 00;33
+.png 00;33
+.mpg 00;33
+.avi 00;33
+.fli 00;33
+.gl  00;33
+.dl  00;33
+.pdf 00;33
 
 # source code files
-.pl 00;33
-.PL 00;33
-.pm 00;33
-.tt 00;33
-.yml 00;33
-.sql 00;33
-.html 00;33
-.css 00;33
-.js 00;33
-.rb 00;33
-.markdown 00;32
-*Rakefile 00;33
-.xml 00;32
-.txt 00;32
+.pl         00;33
+.PL         00;33
+.pm         00;33
+.tt         00;33
+.yml        00;33
+.sql        00;33
+.html       00;33
+.css        00;33
+.js         00;33
+.rb         00;33
+.markdown   00;32
+*Rakefile   00;33
+.xml        00;32
+.txt        00;32
