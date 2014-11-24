@@ -19,7 +19,7 @@ setopt cdablevars
 
 # Show contents of directory after cd-ing into it
 chpwd() {
-  ls -al
+  gls -AlhF --color=auto --group-directories-first
 }
 
 # Save a ton of history
