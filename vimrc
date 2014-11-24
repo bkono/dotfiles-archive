@@ -238,6 +238,8 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
 
+""" Easytags config
+let g:easytags_async = 1
 
 "-----------------------------------------------------------------------------
 " CtrlP Settings
