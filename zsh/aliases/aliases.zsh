@@ -136,6 +136,10 @@ alias grbs='git rebase --skip'
 alias gsui='git submodule update --init'
 alias gib='git init --bare'
 
+# ionic
+alias iri='ionic run ios -l -c -s'
+alias iei='ionic run ios -l -c -s'
+
 # Bundler
 alias b="bundle"
 alias bake='bundle exec rake'
