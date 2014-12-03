@@ -115,14 +115,11 @@ fpath=(~/.zsh/completion $fpath)
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres93.app/Contents/MacOS/bin
 
 # export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home"
-export JAVA_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M -Xss256K"
+export JAVA_OPTS="-Xms2048M -Xmx6144M -XX:MaxPermSize=6144M"
 export MAVEN_OPTS=${JAVA_OPTS}
-# export M2_HOME="/usr/local/Cellar/maven/3.2.2/libexec"
 export SBT_OPTS=${JAVA_OPTS}
 export EDITOR='subl -w'
 export COPYFILE_DISABLE=true
-# export ANDROID_HOME="/Users/bkonowitz/lib/adt/current/sdk"
-# export JETTY_HOME="/Users/bkonowitz/servers/jetty"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 source ~/.zlogin
