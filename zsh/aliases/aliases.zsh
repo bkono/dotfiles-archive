@@ -135,6 +135,7 @@ alias gmt='git mergetool'
 alias grbs='git rebase --skip'
 alias gsui='git submodule update --init'
 alias gib='git init --bare'
+alias glm='ls -al `git status | grep modified | cut -d":" -f2`'
 
 # ionic
 alias iri='ionic run ios -l -c -s'
