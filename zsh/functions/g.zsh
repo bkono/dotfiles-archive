@@ -1,10 +1,15 @@
 # No arguments: `git status`
 # With arguments: acts like `git`
 g() {
+  cmd=`which hub`
+  if [[ ! -a $cmd ]] ; then
+    cmd=`which git`
+  fi
+
   if [[ $# > 0 ]]; then
-    git $@
+    $cmd $@
   else
-    git status
+    $cmd status
   fi
 }
 
